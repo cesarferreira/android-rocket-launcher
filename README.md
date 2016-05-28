@@ -1,15 +1,17 @@
 # Gradle Android Run
 Gradle plugin that adds tasks to android modules for installing and launching all variants.
 
+<p align="center">
+<img src="extras/screenshot.png" />
+</p>
 ## How to use
-A "one liner" for your module's `build.gradle`
+A *one liner* for your module's `build.gradle`
 ```groovy
 plugins {
-    id "gradle-android-run" version "0.2.1"
+    id 'gradle-android-opener' version '0.2.1'
 }
 ```
 Now, when you run `./gradlew tasks`, you'll see something like this:
-
 
 ```
 > runFreeDebug - Install and run FreeDebug build.

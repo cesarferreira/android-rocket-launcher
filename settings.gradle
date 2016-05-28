@@ -1,1 +1,1 @@
-include ':app', ':gradle-android-run'
+include ':sample', ':gradle-android-opener'

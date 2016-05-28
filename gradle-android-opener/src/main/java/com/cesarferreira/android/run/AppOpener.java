@@ -1,3 +1,4 @@
+
 package com.cesarferreira.android.run;
 
 import com.android.build.gradle.AppExtension;
@@ -20,7 +21,7 @@ public class AppOpener implements Plugin<Project> {
 		AppExtension ext = project.getExtensions().getByType(AppExtension.class);
 
 		ext.getApplicationVariants().all(v -> {
-			String taskName = "run"+capitalize(v.getName());
+			String taskName = "open"+capitalize(v.getName());
 			DefaultTask parentTask = v.getInstall();
 			File adb = ext.getAdbExe();
 
@@ -32,10 +33,10 @@ public class AppOpener implements Plugin<Project> {
 				variantAction.put("dependsOn", parentTask);
 				variantAction.put("description", "Installs and runs " + v.getDescription());
 				variantAction.put("type", Exec.class);
-				variantAction.put("group", "Running");
+				variantAction.put("group", "Open");
 
 				Exec t = (Exec) project.task(variantAction, taskName);
-//am
+
 				t.setCommandLine(adb, "shell", "monkey", "-p", packageId, "-c", "android.intent.category.LAUNCHER", "1");
 			}
 		});

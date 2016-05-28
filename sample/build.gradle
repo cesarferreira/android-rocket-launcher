@@ -4,16 +4,16 @@ buildscript {
     }
 
     dependencies {
-        classpath fileTree(dir: '../gradle-android-run/build/libs', include: ['*.jar'])
+        classpath fileTree(dir: '../gradle-android-opener/build/libs', include: ['*.jar'])
     }
 }
 
 //plugins {
-//    id "gradle-android-run" version "0.2.1"
+//    id "gradle-android-opener" version "0.2.1"
 //}
 
 apply plugin: 'com.android.application'
-//apply plugin: com.cesarferreira.android.run.AppOpener
+apply plugin: com.cesarferreira.android.run.AppOpener
 
 android {
     compileSdkVersion 23
