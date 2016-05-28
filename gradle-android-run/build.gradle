@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven-publish'
+
+apply from: 'publish.gradle'
+
+buildscript {
+
+    ext {
+        groupId = 'com.cesarferreira'
+        artifactId = 'gradle-android-run'
+        version = '0.2.1'
+        url = 'https://github.com/cesarferreira/gradle-android-run'
+        vcsUrl = 'https://github.com/cesarferreira/gradle-android-run.git'
+        description = 'Build, install and run any android module with a one liner'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+    }
+}
+
+dependencies {
+    compile gradleApi()
+    compile "com.android.tools.build:gradle:2.1.0"
+}
+repositories {
+    mavenCentral()
+}

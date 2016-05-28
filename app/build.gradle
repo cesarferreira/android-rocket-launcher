@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath fileTree(dir: '../gradle-android-run/build/libs', include: ['*.jar'])
+    }
+}
+
+//plugins {
+//    id "gradle-android-run" version "0.2.1"
+//}
+
+apply plugin: 'com.android.application'
+//apply plugin: com.cesarferreira.android.run.AppOpener
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.cesarferreira.androidrun"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    productFlavors {
+        demo {
+        }
+        free {
+        }
+        paid {
+        }
+    }
+
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.4.0'
+}
