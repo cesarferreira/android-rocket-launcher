@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath fileTree(dir: '../gradle-android-opener/build/libs', include: ['*.jar'])
+        classpath fileTree(dir: '../android-rocket-launcher/build/libs', include: ['*.jar'])
     }
 }
 
@@ -13,7 +13,7 @@ buildscript {
 //}
 
 apply plugin: 'com.android.application'
-apply plugin: com.cesarferreira.android.run.AppOpener
+// apply plugin: com.cesarferreira.android.rocket.launcher.RocketLauncher
 
 android {
     compileSdkVersion 23

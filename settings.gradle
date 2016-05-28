@@ -1,1 +1,1 @@
-include ':sample', ':gradle-android-opener'
+include ':sample', ':android-rocket-launcher'

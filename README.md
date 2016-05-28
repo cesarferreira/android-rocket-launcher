@@ -1,27 +1,27 @@
-# Gradle Android Run
-Gradle plugin that adds tasks to android modules for installing and launching all variants.
+# Android Rocket Launcher
+Gradle plugin that adds tasks to your android modules for installing and launching all variants.
 
 <p align="center">
 <img src="extras/screenshot.png" />
 </p>
+
 ## How to use
 A *one liner* for your module's `build.gradle`
 ```groovy
 plugins {
-    id 'gradle-android-opener' version '0.2.1'
+    id 'android-rocket-launcher' version '0.2.1'
 }
 ```
 Now, when you run `./gradlew tasks`, you'll see something like this:
 
 ```
-> runFreeDebug - Install and run FreeDebug build.
-> runFreeProduction - Install and run FreeProduction build.
-> runPaidDebug - Install and run PaidDebug build.
-> runPaidProduction - Install and run PaidProduction build.
+openDemoDebug - Installs and opens DebugDemo build
+openFreeDebug - Installs and opens DebugFree build
+openPaidDebug - Installs and opens DebugPaid build
 ```
 
 ### Alternative
-Copy-pasting this task from project to project
+Copy-pasting this gradle task on every project
 
 ```groovy
 // Running the APK on your Android Device

@@ -1,5 +1,5 @@
 
-package com.cesarferreira.android.run;
+package com.cesarferreira.android.rocket.launcher;
 
 import com.android.build.gradle.AppExtension;
 import com.android.build.gradle.AppPlugin;
@@ -10,7 +10,7 @@ import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.api.tasks.Exec;
 
-public class AppOpener implements Plugin<Project> {
+public class RocketLauncher implements Plugin<Project> {
 	@Override
 	public void apply(Project project) {
 
@@ -31,7 +31,7 @@ public class AppOpener implements Plugin<Project> {
 
 				HashMap variantAction = new HashMap();
 				variantAction.put("dependsOn", parentTask);
-				variantAction.put("description", "Installs and runs " + v.getDescription());
+				variantAction.put("description", "Installs and opens " + v.getDescription());
 				variantAction.put("type", Exec.class);
 				variantAction.put("group", "Open");
 
