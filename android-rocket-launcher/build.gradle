@@ -1,32 +1,9 @@
 apply plugin: 'java'
-apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven-publish'
-
-apply from: 'publish.gradle'
-
-buildscript {
-
-    ext {
-        ext_groupId = 'com.cesarferreira'
-        ext_artifactId = 'android-rocket-launcher'
-        ext_version = '0.2.1'
-        ext_url = 'https://github.com/cesarferreira/android-rocket-launcher'
-        ext_vcsUrl = 'https://github.com/cesarferreira/android-rocket-launcher.git'
-        ext_description = 'Build, install and run any android module with a one liner'
-    }
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-    }
-}
 
 dependencies {
     compile gradleApi()
     compile "com.android.tools.build:gradle:2.1.0"
 }
-repositories {
-    mavenCentral()
-}
+
+apply from: 'publish.gradle'

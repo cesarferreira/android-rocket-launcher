@@ -14,9 +14,20 @@ publishing {
   }
 }
 
-task sourcesJar(type: Jar, dependsOn: classes) {
-  classifier = 'src'
-  from sourceSets.main.allSource
+task sourcesJar(type: Jar) {
+    from sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
 }
 
 bintray {
@@ -24,7 +35,7 @@ bintray {
   key = System.getenv('BINTRAY_API_KEY')
 
   dryRun = false
-  publish = false
+  publish = true
 
   publications = ['MyPublication']
   pkg {
@@ -32,6 +43,7 @@ bintray {
     name = "$ext_artifactId"
     licenses = ['Apache-2.0']
     labels = ['android', 'gradle-plugin']
+
     publicDownloadNumbers = true
     vcsUrl = "$ext_vcsUrl"
 
@@ -39,6 +51,9 @@ bintray {
       name = "$ext_version"
       desc = "$ext_description"
       released  = new Date()
+      gpg {
+          sign = true // Determines whether to GPG sign the files.
+      }
     }
   }
 }

@@ -1,6 +1,16 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+
+  ext {
+      ext_groupId = 'com.cesarferreira'
+      ext_artifactId = 'android-rocket-launcher'
+      ext_version = '0.2.2'
+      ext_url = 'https://github.com/cesarferreira/android-rocket-launcher'
+      ext_vcsUrl = 'https://github.com/cesarferreira/android-rocket-launcher.git'
+      ext_description = 'Build, install and run any android module with a one liner'
+  }
+
     repositories {
         jcenter()
         mavenLocal()
@@ -10,8 +20,17 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.jfrog.bintray' version '1.6'
+}
+
 allprojects {
     repositories {
         jcenter()
     }
 }
+
+
+
+
+version = "$ext_version"
