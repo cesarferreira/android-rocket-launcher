@@ -1,15 +1,15 @@
 
-group "$groupId"
-version "$version"
+group "$ext_groupId"
+version "$ext_version"
 
 publishing {
   publications {
     MyPublication(MavenPublication) {
       from components.java
       artifact sourcesJar
-      groupId "$groupId"
-      artifactId "$artifactId"
-      version "$version"
+      groupId "$ext_groupId"
+      artifactId "$ext_artifactId"
+      version "$ext_version"
     }
   }
 }
@@ -29,14 +29,15 @@ bintray {
   publications = ['MyPublication']
   pkg {
     repo = 'maven'
-    name = "gradle-plugin.$artifactId"
-    licenses = ['BSD 2-Clause']
+    name = "$ext_artifactId"
+    licenses = ['Apache-2.0']
     labels = ['android', 'gradle-plugin']
     publicDownloadNumbers = true
-    vcsUrl = "$vcsUrl"
+    vcsUrl = "$ext_vcsUrl"
 
     version {
-      name = "$version"
+      name = "$ext_version"
+      released  = new Date()
     }
   }
 }

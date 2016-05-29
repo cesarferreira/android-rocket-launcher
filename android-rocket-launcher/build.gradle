@@ -7,12 +7,12 @@ apply from: 'publish.gradle'
 buildscript {
 
     ext {
-        groupId = 'com.cesarferreira'
-        artifactId = 'android-rocket-launcher'
-        version = '0.2.1'
-        url = 'https://github.com/cesarferreira/android-rocket-launcher'
-        vcsUrl = 'https://github.com/cesarferreira/android-rocket-launcher.git'
-        description = 'Build, install and run any android module with a one liner'
+        ext_groupId = 'com.cesarferreira'
+        ext_artifactId = 'android-rocket-launcher'
+        ext_version = '0.2.1'
+        ext_url = 'https://github.com/cesarferreira/android-rocket-launcher'
+        ext_vcsUrl = 'https://github.com/cesarferreira/android-rocket-launcher.git'
+        ext_description = 'Build, install and run any android module with a one liner'
     }
     repositories {
         mavenCentral()
