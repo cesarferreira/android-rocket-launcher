@@ -37,6 +37,7 @@ bintray {
 
     version {
       name = "$ext_version"
+      desc = "$ext_description"
       released  = new Date()
     }
   }
