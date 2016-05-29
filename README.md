@@ -9,7 +9,7 @@ Gradle plugin that adds tasks to your android modules for installing and launchi
 A *one liner* for your module's `build.gradle`
 ```groovy
 plugins {
-    id 'android-rocket-launcher' version '0.2.1'
+    id 'android-rocket-launcher' version '0.2.2'
 }
 ```
 Now, when you run `./gradlew tasks`, you'll see something like this:
