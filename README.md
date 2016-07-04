@@ -6,10 +6,18 @@ Gradle plugin that adds tasks to your android modules for installing and launchi
 </p>
 
 ## How to use
-A *one liner* for your module's `build.gradle`
+Paste this code into your module's `build.gradle`
+
 ```groovy
-plugins {
-    id 'android-rocket-launcher' version '0.2.2'
+apply plugin: 'android-rocket-launcher'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.cesarferreira:android-rocket-launcher:0.2.2'
+    }
 }
 ```
 Now, when you run `./gradlew tasks`, you'll see something like this:
