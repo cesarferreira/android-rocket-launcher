@@ -1,4 +1,5 @@
-# Android Rocket Launcher
+# Android Rocket Launcher [ ![Download](https://api.bintray.com/packages/cesarferreira/maven/android-rocket-launcher/images/download.svg) ](https://bintray.com/cesarferreira/maven/android-rocket-launcher/_latestVersion)
+
 Gradle plugin that adds tasks to your android modules for installing and launching all variants.
 
 <p align="center">
@@ -16,7 +17,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.cesarferreira:android-rocket-launcher:0.2.2'
+        classpath 'com.cesarferreira:android-rocket-launcher:0.2.3'
     }
 }
 ```
