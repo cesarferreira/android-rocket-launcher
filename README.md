@@ -24,9 +24,9 @@ buildscript {
 Now, when you run `./gradlew tasks`, you'll see something like this:
 
 ```
-openDemoDebug - Installs and opens DebugDemo build
-openFreeDebug - Installs and opens DebugFree build
-openPaidDebug - Installs and opens DebugPaid build
+runDemoDebug - Installs and run DebugDemo build
+runFreeDebug - Installs and run DebugFree build
+runPaidDebug - Installs and run DebugPaid build
 ```
 
 ### Alternative

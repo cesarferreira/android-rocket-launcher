@@ -21,7 +21,7 @@ public class RocketLauncher implements Plugin<Project> {
 		AppExtension ext = project.getExtensions().getByType(AppExtension.class);
 
 		ext.getApplicationVariants().all(v -> {
-			String taskName = "open"+capitalize(v.getName());
+			String taskName = "run"+capitalize(v.getName());
 			DefaultTask parentTask = v.getInstall();
 			File adb = ext.getAdbExe();
 
@@ -31,9 +31,9 @@ public class RocketLauncher implements Plugin<Project> {
 
 				HashMap variantAction = new HashMap();
 				variantAction.put("dependsOn", parentTask);
-				variantAction.put("description", "Installs and opens " + v.getDescription());
+				variantAction.put("description", "Installs and runs " + v.getDescription());
 				variantAction.put("type", Exec.class);
-				variantAction.put("group", "Open");
+				variantAction.put("group", "Run");
 
 				Exec t = (Exec) project.task(variantAction, taskName);
 
