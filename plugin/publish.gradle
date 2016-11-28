@@ -39,7 +39,7 @@ bintray {
 
   publications = ['MyPublication']
   pkg {
-    repo = 'maven'
+    repo = 'me.riyaz'
     name = "$ext_artifactId"
     licenses = ['Apache-2.0']
     labels = ['android', 'gradle-plugin']
