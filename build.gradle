@@ -3,12 +3,12 @@
 buildscript {
 
   ext {
-      ext_groupId = 'com.cesarferreira'
-      ext_artifactId = 'android-rocket-launcher'
-      ext_version = '0.2.3'
-      ext_url = 'https://github.com/cesarferreira/android-rocket-launcher'
-      ext_vcsUrl = 'https://github.com/cesarferreira/android-rocket-launcher.git'
-      ext_description = 'Build, install and run any android module with a one liner'
+      ext_groupId = 'me.riyaz'
+      ext_artifactId = 'android-build-and-run'
+      ext_version = '0.0.2'
+      ext_url = 'https://github.com/riyaz/android-build-and-run'
+      ext_vcsUrl = 'https://github.com/riyaz/android-build-and-run.git'
+      ext_description = 'Build, install and run any android app with a one liner'
   }
 
     repositories {
@@ -25,8 +25,5 @@ allprojects {
         jcenter()
     }
 }
-
-
-
 
 version = "$ext_version"

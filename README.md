@@ -1,32 +1,28 @@
-# Android Rocket Launcher [ ![Download](https://api.bintray.com/packages/cesarferreira/maven/android-rocket-launcher/images/download.svg) ](https://bintray.com/cesarferreira/maven/android-rocket-launcher/_latestVersion)
+# Android Rocket Launcher [ ![Download](https://api.bintray.com/packages/riyaz/me.riyaz/android-build-and-run/images/download.svg) ](https://bintray.com/riyaz/me.riyaz/android-build-and-run/_latestVersion)
 
-Gradle plugin that adds tasks to your android modules for installing and launching all variants.
-
-<p align="center">
-<img src="extras/screenshot.png" />
-</p>
-
+Gradle plugin that adds tasks to your android apps for installing and launching all variants.
+Based on [android-rocket-launcher](https://github.com/cesarferreira/android-rocket-launcher)
 ## How to use
 Paste this code into your module's `build.gradle`
 
 ```groovy
-apply plugin: 'android-rocket-launcher'
+apply plugin: 'android-build-and-run'
 
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.cesarferreira:android-rocket-launcher:0.2.3'
+        classpath 'me.riyaz:android-build-and-run:0.0.2'
     }
 }
 ```
 Now, when you run `./gradlew tasks`, you'll see something like this:
 
 ```
-runDemoDebug - Installs and run DebugDemo build
-runFreeDebug - Installs and run DebugFree build
-runPaidDebug - Installs and run DebugPaid build
+runDemoDebug - Install and run DebugDemo build
+runFreeDebug - Install and run DebugFree build
+runPaidDebug - Install and run DebugPaid build
 ```
 
 ### Alternative
@@ -62,5 +58,3 @@ android.applicationVariants.all { variant ->
     }
 }
 ```
-
-It's a no brainer :smile:

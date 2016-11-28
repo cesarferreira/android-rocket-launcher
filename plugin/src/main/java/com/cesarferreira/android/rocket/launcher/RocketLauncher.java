@@ -1,4 +1,3 @@
-
 package com.cesarferreira.android.rocket.launcher;
 
 import com.android.build.gradle.AppExtension;
@@ -31,7 +30,7 @@ public class RocketLauncher implements Plugin<Project> {
 
 				HashMap variantAction = new HashMap();
 				variantAction.put("dependsOn", parentTask);
-				variantAction.put("description", "Installs and runs " + v.getDescription());
+				variantAction.put("description", "Build, Install and run " + v.getDescription());
 				variantAction.put("type", Exec.class);
 				variantAction.put("group", "Run");
 
