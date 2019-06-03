@@ -7,20 +7,20 @@ Gradle plugin that adds tasks to your android modules for installing and launchi
 </p>
 
 ## How to use
-Paste this code into your module's `build.gradle`
+Paste this code into your main `build.gradle`
 
 ```groovy
-apply plugin: 'android-rocket-launcher'
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.cesarferreira:android-rocket-launcher:0.2.3'
-    }
+dependencies {
+    // ...
+    classpath 'com.cesarferreira:android-rocket-launcher:0.2.3'
 }
 ```
+
+Paste this code into your app module `build.gradle`
+```groovy
+apply plugin: 'android-rocket-launcher'
+```
+
 Now, when you run `./gradlew tasks`, you'll see something like this:
 
 ```
@@ -64,3 +64,11 @@ android.applicationVariants.all { variant ->
 ```
 
 It's a no brainer :smile:
+
+## Maintainers
+
+- [Cesar Ferreira](http://cesarferreira.com)
+
+## License
+
+MIT
