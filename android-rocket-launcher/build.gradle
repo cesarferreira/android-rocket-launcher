@@ -1,5 +1,4 @@
-apply plugin: 'java'
-apply plugin: 'maven-publish'
+apply plugin: 'kotlin'
 apply plugin: 'com.novoda.bintray-release'
 
 
@@ -17,12 +16,14 @@ publish {
     userOrg = 'cesarferreira'
     groupId = 'com.cesarferreira'
     artifactId = 'android-rocket-launcher'
-    publishVersion = '0.3.0'
+    publishVersion = '0.4.0'
     desc = 'Build, install and run any android module with a one liner'
     website = 'https://github.com/cesarferreira/android-rocket-launcher'
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
     compile gradleApi()
-    compile "com.android.tools.build:gradle:3.4.1"
+    compile "com.android.tools.build:gradle:$gradle_version"
 }
