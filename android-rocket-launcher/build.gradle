@@ -16,7 +16,7 @@ publish {
     userOrg = 'cesarferreira'
     groupId = 'com.cesarferreira'
     artifactId = 'android-rocket-launcher'
-    publishVersion = '0.4.0'
+    publishVersion = '0.9.0'
     desc = 'Build, install and run any android module with a one liner'
     website = 'https://github.com/cesarferreira/android-rocket-launcher'
 }
