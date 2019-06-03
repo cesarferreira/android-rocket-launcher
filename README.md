@@ -24,9 +24,14 @@ apply plugin: 'android-rocket-launcher'
 Now, when you run `./gradlew tasks`, you'll see something like this:
 
 ```
-openDemoDebug - Installs and opens DebugDemo build
-openFreeDebug - Installs and opens DebugFree build
-openPaidDebug - Installs and opens DebugPaid build
+openDevDebug - Installs and opens DebugDev build
+openDevRelease - Installs and opens ReleaseDev build
+openEnvtestDebug - Installs and opens DebugEnvtest build
+openEnvtestRelease - Installs and opens ReleaseEnvtest build
+openProdDebug - Installs and opens DebugProd build
+openProdRelease - Installs and opens ReleaseProd build
+openSandboxDebug - Installs and opens DebugSandbox build
+openSandboxRelease - Installs and opens ReleaseSandbox build
 ```
 
 ### Alternative
