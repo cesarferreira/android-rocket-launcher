@@ -26,7 +26,7 @@ class RocketLauncher : Plugin<Project> {
 
                 val variantAction = hashMapOf(
                     "dependsOn" to parentTask,
-                    "description" to "Installs and opens " + v.description,
+                    "description" to "Installs and opens " + capitalize(v.name),
                     "type" to Exec::class.java,
                     "group" to "Open"
                 )

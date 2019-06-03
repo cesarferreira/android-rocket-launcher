@@ -12,7 +12,7 @@ Paste this code into your main `build.gradle`
 ```groovy
 dependencies {
     // ...
-    classpath 'com.cesarferreira:android-rocket-launcher:0.9.0'
+    classpath 'com.cesarferreira:android-rocket-launcher:0.9.1'
 }
 ```
 
@@ -24,14 +24,14 @@ apply plugin: 'android-rocket-launcher'
 Now, when you run `./gradlew tasks`, you'll see something like this:
 
 ```
-openDevDebug - Installs and opens DebugDev build
-openDevRelease - Installs and opens ReleaseDev build
-openEnvtestDebug - Installs and opens DebugEnvtest build
-openEnvtestRelease - Installs and opens ReleaseEnvtest build
-openProdDebug - Installs and opens DebugProd build
-openProdRelease - Installs and opens ReleaseProd build
-openSandboxDebug - Installs and opens DebugSandbox build
-openSandboxRelease - Installs and opens ReleaseSandbox build
+openDevDebug - Installs and opens DevDebug build
+openDevRelease - Installs and opens DevRelease build
+openEnvtestDebug - Installs and opens EnvtestDebug build
+openEnvtestRelease - Installs and opens EnvtestRelease build
+openProdDebug - Installs and opens ProdDebug build
+openProdRelease - Installs and opens ProdRelease build
+openSandboxDebug - Installs and opens SandboxDebug build
+openSandboxRelease - Installs and opens SandboxRelease build
 ```
 
 ### Alternative
