@@ -12,7 +12,7 @@ Paste this code into your main `build.gradle`
 ```groovy
 dependencies {
     // ...
-    classpath 'com.cesarferreira:android-rocket-launcher:0.2.3'
+    classpath 'com.cesarferreira:android-rocket-launcher:0.9.0'
 }
 ```
 
