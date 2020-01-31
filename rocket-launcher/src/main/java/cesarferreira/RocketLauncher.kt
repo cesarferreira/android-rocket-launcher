@@ -1,10 +1,11 @@
-package com.cesarferreira.android.rocket.launcher
+package cesarferreira
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.AppPlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.Exec
+import java.util.Locale
 
 class RocketLauncher : Plugin<Project> {
     override fun apply(project: Project) {
@@ -17,8 +18,8 @@ class RocketLauncher : Plugin<Project> {
 
         ext.applicationVariants.all { v ->
             val taskName = "open" + capitalize(v.name)
-            val parentTask = v.install
-            val adb = ext.adbExe
+            val parentTask = v.installProvider
+            val adb = ext.adbExecutable
 
             if (v.isSigningReady) {
 
@@ -39,6 +40,6 @@ class RocketLauncher : Plugin<Project> {
     }
 
     private fun capitalize(input: String): String {
-        return input.substring(0, 1).toUpperCase() + input.substring(1)
+        return input.substring(0, 1).toUpperCase(Locale.getDefault()) + input.substring(1)
     }
 }

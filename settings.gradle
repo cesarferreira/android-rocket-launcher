@@ -1,1 +1,2 @@
-include ':android-rocket-launcher'
+include ':rocket-launcher'
+include ':sample'
