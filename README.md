@@ -1,6 +1,9 @@
-# Android Rocket Launcher [ ![Download](https://api.bintray.com/packages/cesarferreira/maven/android-rocket-launcher/images/download.svg) ](https://bintray.com/cesarferreira/maven/android-rocket-launcher/_latestVersion)
-
-Gradle plugin that adds tasks to your android modules for installing and launching all variants.
+<h1 align="center">Android Rocket Launcher</h1>
+<p align="center">Gradle plugin that adds tasks to your android modules for <strong>installing</strong> and <strong>launching</strong> all variants</p>
+<p align="center">
+  <a href="https://bintray.com/cesarferreira/maven/android-rocket-launcher/_latestVersion"><img src="https://api.bintray.com/packages/cesarferreira/maven/android-rocket-launcher/images/download.svg" alt="download"></a>
+  <a href="https://github.com/cesarferreira/android-rocket-launcher/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+</p>
 
 <p align="center">
 <img src="extras/screenshot.png" />
