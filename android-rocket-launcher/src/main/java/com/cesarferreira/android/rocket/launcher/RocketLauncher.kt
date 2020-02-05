@@ -17,8 +17,8 @@ class RocketLauncher : Plugin<Project> {
 
         ext.applicationVariants.all { v ->
             val taskName = "open" + capitalize(v.name)
-            val parentTask = v.install
-            val adb = ext.adbExe
+            val parentTask = v.installProvider
+            val adb = ext.adbExecutable
 
             if (v.isSigningReady) {
 
